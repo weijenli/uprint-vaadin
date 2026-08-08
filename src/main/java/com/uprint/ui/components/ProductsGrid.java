@@ -8,9 +8,9 @@ import org.springframework.core.io.Resource;
 import static com.uprint.utils.Constants.BOOK_IMAGE_RELATIVE_PATH;
 import static com.uprint.utils.Constants.RESOURCE_PATH;
 
-public class ProductsGrids extends Div {
-    public ProductsGrids() {
-        addClassName("product-grids");
+public class ProductsGrid extends Div {
+    public ProductsGrid() {
+        addClassName("product-grid");
         Resource[] bookImages = ResourcesUtil.getImageCountInResources(RESOURCE_PATH + BOOK_IMAGE_RELATIVE_PATH);
         if (bookImages != null) renderImages(bookImages);
     }

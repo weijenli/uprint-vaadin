@@ -1,11 +1,10 @@
 @import url("./routerLink.css");
-/* Add your styles here */
 
 .top-menu {
     gap: 50px;
 }
 
-.product-grids {
+.product-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
@@ -16,4 +15,15 @@
     width: 400px;
     object-fit: cover;
     border-radius: 8px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.team-image {
+    height: 540px;
+    width: 958px;
 }

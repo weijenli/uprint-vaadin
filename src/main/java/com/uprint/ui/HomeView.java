@@ -9,7 +9,6 @@ public class HomeView extends VerticalLayout {
 
     public HomeView() {
         Image background = new Image("./static/images/home-bk.png", "background");
-        setClassName("homeView");
         add(background);
     }
 
