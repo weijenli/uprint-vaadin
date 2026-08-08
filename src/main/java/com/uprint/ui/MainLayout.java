@@ -6,7 +6,6 @@ import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.Layout;
 import com.vaadin.flow.router.RouterLink;
-import org.jspecify.annotations.NonNull;
 
 @Layout
 public final class MainLayout extends AppLayout {
@@ -35,10 +34,9 @@ public final class MainLayout extends AppLayout {
         RouterLink contactLink = new RouterLink("Contact Us", ContactView.class);
         contactLink.addClassName("top-link");
 
-        HorizontalLayout menu = new HorizontalLayout(
+        return new HorizontalLayout(
           homeLink, projectsLink, aboutLink, contactLink
         );
-        return menu;
     }
 }
 

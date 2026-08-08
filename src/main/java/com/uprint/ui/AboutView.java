@@ -1,9 +1,7 @@
 package com.uprint.ui;
 
-import com.vaadin.flow.component.Html;
 import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 
 @Route(value = "about", layout = MainLayout.class)
