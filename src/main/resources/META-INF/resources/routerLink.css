@@ -1,0 +1,34 @@
+
+.top-link {
+    position: relative;
+    text-decoration: none;
+    color: #5DB3F5;
+    font-size: 20px;
+    font-family: "Georgia"
+}
+
+.top-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 10;
+    height: 3px;
+    background: red;
+}
+
+.top-link:hover {
+    text-shadow: 0 0 10px rgba(25,118,210,.8);
+    transform: translateY(-5px);
+}
+
+.top-link:hover::after {
+    width: 100%;
+}
+
+a[highlight] {
+    color: #051DB3;
+    font-weight: bold;
+}
+
+
