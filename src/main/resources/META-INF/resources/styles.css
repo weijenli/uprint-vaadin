@@ -1,19 +1,30 @@
 @import url("./routerLink.css");
 
+#productsGrid {
+    scroll-margin-top: 80px;
+}
+
 .top-menu {
     gap: 50px;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
 }
 
 .product-image {
-    height: 400px;
     width: 400px;
+    height: 400px;
     object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-image-wide {
+    height: 400px;
+    width: 650px;
+    object-fit: fill;
     border-radius: 8px;
 }
 
@@ -23,7 +34,86 @@
     gap: 16px;
 }
 
+.mach-image {
+    height: 540px;
+    width: 958px;
+    object-fit: contain;
+}
+
 .team-image {
     height: 540px;
     width: 958px;
+    object-fit: cover;
+}
+
+.banner-container {
+    position: relative;
+    display: inline-block;
+}
+
+.banner-title {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    width: 600px;
+    line-height: 1.2;
+}
+
+.banner-desc {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    font-size: 18px;
+    width: 600px;
+    line-height: 1.2;
+}
+
+.banner-bullet {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    font-size: 18px;
+    width: 600px;
+}
+
+.contact-us {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    font-size: 18px;
+    width: 600px;
+}
+
+/* For testing: Container to control vertical rhythm */
+.hero-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align left (change to center if desired) */
+  gap: 0.75rem;            /* Spacing between eyebrow and title */
+  max-width: 800px;
+}
+
+/* 1. Eyebrow Headline */
+.eyebrow {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 0.875rem;     /* 14px - keeps it small and subtle */
+  font-weight: 600;        /* Medium/Semi-bold for readability at small sizes */
+  text-transform: uppercase;
+  letter-spacing: 0.18em;  /* Wide tracking creates the high-end look */
+  color: #6b7280;          /* Muted accent color (Tailwind Gray 500) */
+  line-height: 1.2;
+}
+
+/* 2. Main Headline */
+.title {
+  font-family: 'Playfair Display', Georgia, serif; /* High-contrast serif */
+  font-size: clamp(2.25rem, 5vw, 3.75rem);        /* Responsive scaling */
+  font-weight: 700;
+  color: #111827;          /* Near-black for rich readability */
+  line-height: 1.1;        /* Tight line-height for large text */
+  letter-spacing: -0.02em;  /* Slightly tightened tracking for headlines */
+  margin: 0;               /* Zeroed out since parent flexbox gap controls spacing */
 }

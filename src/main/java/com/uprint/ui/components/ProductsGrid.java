@@ -1,30 +1,38 @@
 package com.uprint.ui.components;
 
 import com.uprint.utils.ResourcesUtil;
+import com.vaadin.flow.component.Html;
 import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
 import org.springframework.core.io.Resource;
 
-import static com.uprint.utils.Constants.BOOK_IMAGE_RELATIVE_PATH;
-import static com.uprint.utils.Constants.RESOURCE_PATH;
-
 public class ProductsGrid extends Div {
-    public ProductsGrid() {
-        addClassName("product-grid");
-        Resource[] bookImages = ResourcesUtil.getImageCountInResources(RESOURCE_PATH + BOOK_IMAGE_RELATIVE_PATH);
-        if (bookImages != null) renderImages(bookImages);
+
+    public ProductsGrid(String title, String folder) {
+        this(title, folder, "product-grid", "product-image");
     }
 
-    private void renderImages(Resource[] bookImages) {
+    public ProductsGrid(String title, String folder, String gridStyle, String imageStyle) {
+        add(new Html("<br/>"));
+        add(new Html("<br/>"));
+        add(new H2(title));
+        Div container = new Div();
+        container.addClassName(gridStyle);
+        Resource[] images = ResourcesUtil.getImageCountInResources(folder);
+        if (images != null) renderImagesFromFolder(container, images.length, folder, imageStyle);
+        add(container);
+    }
+
+    private void renderImagesFromFolder(Div container, int length, String filepath, String style) {
         try {
-            for (int i = 0; i < bookImages.length; i++) {
-                Image img = new Image(BOOK_IMAGE_RELATIVE_PATH + i + ".jpg", "Image " + i);
-                img.addClassName("product-image");
-                add(img);
+            for (int i = 0; i < length; i++) {
+                Image img = new Image("./static/images/" + filepath + "/" + i + ".jpg", "Image " + i);
+                img.addClassName(style);
+                container.add(img);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
 }

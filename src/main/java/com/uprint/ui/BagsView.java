@@ -6,12 +6,10 @@ import com.uprint.ui.components.BrochuresGrid;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
-@Route(value = "productsview", layout = MainLayout.class)
-public class ProductsView extends VerticalLayout {
+@Route(value = "bagsview", layout = MainLayout.class)
+public class BagsView extends VerticalLayout {
 
-    public ProductsView() {
-        add(new BooksGrid());
+    public BagsView() {
         add(new BagsGrid());
-        add(new BrochuresGrid());
     }
 }

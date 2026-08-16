@@ -10,7 +10,7 @@ public class ResourcesUtil {
     public static Resource[] getImageCountInResources(String resourceFolderPath) {
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         try {
-            return resolver.getResources(resourceFolderPath + "/*");
+            return resolver.getResources("classpath*:META-INF/resources/static/images/" + resourceFolderPath + "/*");
         } catch (IOException e) {
             e.printStackTrace();
             return null;
