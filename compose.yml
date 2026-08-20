@@ -1,0 +1,18 @@
+services:
+  app:
+    image: uprint-web:1.0.0
+    container_name: uprint-web
+    restart: unless-stopped
+
+    expose:
+      - "8080"
+
+    labels:
+      - "traefik.enable=true"
+
+      - "traefik.http.routers.uprint.rule=Host(`app.uprintpress.com`, `www.uprintpress.com`)"
+      - "traefik.http.routers.uprint.entrypoints=websecure"
+      - "traefik.http.routers.uprint.tls=true"
+      - "traefik.http.routers.uprint.tls.certresolver=letsencrypt"
+
+      - "traefik.http.services.uprint.loadbalancer.server.port=8080"

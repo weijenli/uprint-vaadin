@@ -1,0 +1,3 @@
+./mvnw clean package -DskipTests
+docker build -t uprint-web:1.0.0 .
+docker compose up -d
