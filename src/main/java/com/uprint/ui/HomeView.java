@@ -4,9 +4,11 @@ import com.uprint.ui.components.ProductsGrid;
 import com.vaadin.flow.component.Html;
 import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 
+@PageTitle("UPrintPress | Printing & Manufacturing")
 @Route(value = "", layout = MainLayout.class)
 public class HomeView extends VerticalLayout {
 
