@@ -10,6 +10,13 @@ RUN mkdir -p $HOME
 WORKDIR $HOME
 COPY . $HOME
 
+# Copy the built JAR from the host machine to the container
+# Update 'target/*.jar' to 'build/libs/*.jar' if using Gradle
+#3COPY target/*.jar app.jar
+# Expose port 8080 (default Spring Boot port)
+EXPOSE 8080
+# ENTRYPOINT ["java", "-jar", "app.jar"]
+
 # If you have a Vaadin Pro key, pass it as a secret with id "proKey":
 #
 #   $ docker build --secret id=proKey,src=$HOME/.vaadin/proKey .

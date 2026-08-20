@@ -70,7 +70,8 @@ public final class MainLayout extends AppLayout {
         productsDropdown.add(
                 new RouterLink("Books", BooksView.class),
                 new RouterLink("Bags", BagsView.class),
-                new RouterLink("Brochures", BrochuresView.class)
+                new RouterLink("Brochures", BrochuresView.class),
+                new RouterLink("Signs", SignsView.class)
         );
         productsMenu.add(productsDropdown);
         productsMenu.addClassName("top-dropdown-menu");

@@ -74,7 +74,7 @@ public class HomeView extends VerticalLayout {
                     img._slideshowInterval = setInterval(() => {
                         index = (index + 1) % urls.length;
                         img.src = urls[index];
-                    }, 2000);
+                    }, 5000);
                 })($0, $1);
             """;
 
