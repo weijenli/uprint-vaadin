@@ -64,7 +64,7 @@
 
 .banner-desc {
     position: absolute;
-    top: clamp(0.5rem, 10vw, 12.5rem);
+    top: clamp(0.5rem, 12vw, 12.5rem);
     left: clamp(0.1rem, 5vw, 3.125rem);
     font-size: clamp(0.5rem, 1.5vw, 1.125rem);
     width: clamp(18rem, 50vw, 37.5rem);
@@ -73,20 +73,32 @@
 
 .banner-bullet {
     position: absolute;
-    top: clamp(4rem, 18vw, 18.75rem);
+    top: clamp(4rem, 20vw, 18.75rem);
     left: clamp(0.1rem, 5vw, 3.125rem);
     font-size: clamp(0.5rem, 1.5vw, 1.125rem);
     width: clamp(18rem, 50vw, 37.5rem);
-    line-height: 1.2;
+    line-height: 1.4;
 }
 
 .contact-us {
     position: absolute;
-    top: clamp(4rem, 30vw, 12.5rem);
-    left: clamp(0.1rem, 5vw, 3.125rem);
-    font-size: clamp(0.5rem, 2vw, 1.25rem);
-    width: clamp(18rem, 50vw, 37.5rem);
+    top: clamp(4rem, 40vw, 12.5rem);
+    left: clamp(2rem, 40vw, 5rem);
+    width: clamp(8rem, 30vw, 100rem);
+}
+
+.contact-text {
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    width: clamp(20rem, 40vw, 100rem);
     line-height: 1.2;
+}
+
+.contact-title {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: clamp(1rem, 3vw, 2.5rem);
+    font-weight: bold;
+    line-height: 1.6;
 }
 
 /* For testing: Container to control vertical rhythm */

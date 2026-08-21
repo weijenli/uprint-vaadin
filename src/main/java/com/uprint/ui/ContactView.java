@@ -11,29 +11,44 @@ public class ContactView extends VerticalLayout {
     public ContactView() {
         Div imageContainer = new Div();
         imageContainer.addClassName("contact-container");
-        imageContainer.add(setupBannerImage(), setupBannerText());
+        imageContainer.add(setupBannerText());
         add(imageContainer);
     }
 
     private Div setupBannerText() {
         Div textArea = new Div();
 
-        textArea.add(new H3("Email"));
+        Span emailTitle = new Span("Email");
+        emailTitle.addClassName("contact-title");
+        Span phoneTitle = new Span("Phone");
+        phoneTitle.addClassName("contact-title");
+        Span addressTitle = new Span("Address");
+        addressTitle.addClassName("contact-title");
+
+        Span phone1 = new Span("+1 626-697-7950");
+        phone1.addClassName("contact-text");
+        Span phone2 = new Span("+1 917-270-2215");
+        phone2.addClassName("contact-text");
+        Span address = new Span("2108 N St Ste N, Sacramento, CA 95816 US");
+        address.addClassName("contact-text");
+        textArea.add(emailTitle);
+        textArea.add(new Html("<br/>"));
         Anchor mailTo = new Anchor("mailto:sales@uprintpress.com", "sales@uprintpress.com");
+        mailTo.addClassName("contact-text");
         mailTo.setTarget("_self");
         textArea.add(mailTo);
         textArea.add(new Html("<br/>"));
+
+        textArea.add(phoneTitle);
+        textArea.add(new Html("<br/>"));
+        textArea.add(phone1);
+        textArea.add(new Html("<br/>"));
+        textArea.add(phone2);
         textArea.add(new Html("<br/>"));
 
-        textArea.add(new H3("Phone"));
-        textArea.add(new Span("+1 626-697-7950"));
+        textArea.add(addressTitle);
         textArea.add(new Html("<br/>"));
-        textArea.add(new Span("+1 917-270-2215"));
-
-        textArea.add(new Html("<br/>"));
-        textArea.add(new Html("<br/>"));
-        textArea.add(new H3("Address"));
-        textArea.add(new Span("2108 N St Ste N, Sacramento, CA 95816 US"));
+        textArea.add(address);
 
         textArea.addClassName("contact-us");
         return textArea;

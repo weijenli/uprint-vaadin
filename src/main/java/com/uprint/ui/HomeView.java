@@ -6,7 +6,6 @@ import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.theme.lumo.LumoUtility;
 
 @PageTitle("UPrintPress | Printing & Manufacturing")
 @Route(value = "", layout = MainLayout.class)
@@ -39,8 +38,8 @@ public class HomeView extends VerticalLayout {
         Span prefix3 = new Span("Unbeatable Value: ");
         prefix3.getStyle().set("font-weight", "bold");
         Span text3 = new Span("Factory-direct pricing backed by fast, reliable global shipping.");
-        Paragraph bullet = new Paragraph(prefix1, text1, new Html("<br/>"), new Html("<br/>"),
-                prefix2, text2, new Html("<br/>"), new Html("<br/>"), prefix3, text3);
+        Paragraph bullet = new Paragraph(prefix1, text1, new Html("<br/>"),
+                prefix2, text2, new Html("<br/>"), prefix3, text3);
         bullet.addClassName("banner-bullet");
         textArea.add(bullet);
 

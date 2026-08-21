@@ -1,0 +1,13 @@
+#!/bin/sh
+
+export JAVA_VERSION=21
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+export
+
+docker stop uprint-web
+docker rm uprint-web
+
+./mvnw clean package -DskipTests
+docker build -t uprint-web:$1 .
+
+docker compose up -d
