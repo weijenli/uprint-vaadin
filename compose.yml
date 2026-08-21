@@ -10,7 +10,7 @@ services:
     labels:
       - "traefik.enable=true"
 
-      - "traefik.http.routers.uprint.rule=Host(`app.uprintpress.com`, `www.uprintpress.com`)"
+      - "traefik.http.routers.uprint.rule=Host(`app.uprintpress.com`) || Host(`www.uprintpress.com`)"
       - "traefik.http.routers.uprint.entrypoints=websecure"
       - "traefik.http.routers.uprint.tls=true"
       - "traefik.http.routers.uprint.tls.certresolver=letsencrypt"

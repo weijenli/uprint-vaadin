@@ -39,7 +39,7 @@ public class HomeView extends VerticalLayout {
         Span prefix3 = new Span("Unbeatable Value: ");
         prefix3.getStyle().set("font-weight", "bold");
         Span text3 = new Span("Factory-direct pricing backed by fast, reliable global shipping.");
-        Paragraph bullet = new Paragraph(prefix1, text1, new Html("<br/>"),  new Html("<br/>"),
+        Paragraph bullet = new Paragraph(prefix1, text1, new Html("<br/>"), new Html("<br/>"),
                 prefix2, text2, new Html("<br/>"), new Html("<br/>"), prefix3, text3);
         bullet.addClassName("banner-bullet");
         textArea.add(bullet);
