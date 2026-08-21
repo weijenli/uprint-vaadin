@@ -1,6 +1,6 @@
 services:
   app:
-    image: uprint-web:1.0.0
+    image: uprint-web:1.0.0 # use env
     container_name: uprint-web
     restart: unless-stopped
 
@@ -10,7 +10,7 @@ services:
     labels:
       - "traefik.enable=true"
 
-      - "traefik.http.routers.uprint.rule=Host(`app.uprintpress.com`) || Host(`www.uprintpress.com`)"
+      - "traefik.http.routers.uprint.rule=Host(`app.uprintpress.com`)"
       - "traefik.http.routers.uprint.entrypoints=websecure"
       - "traefik.http.routers.uprint.tls=true"
       - "traefik.http.routers.uprint.tls.certresolver=letsencrypt"
