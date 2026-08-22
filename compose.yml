@@ -9,8 +9,8 @@ services:
 
     labels:
       - "traefik.enable=true"
-
-      - "traefik.http.routers.uprint.rule=Host(`app.uprintpress.com`)"
+      - "traefik.docker.network=bridge"
+      - "traefik.http.routers.uprint.rule=Host(`uprintpress.com`) || Host(`www.uprintpress.com`)"
       - "traefik.http.routers.uprint.entrypoints=websecure"
       - "traefik.http.routers.uprint.tls=true"
       - "traefik.http.routers.uprint.tls.certresolver=letsencrypt"
