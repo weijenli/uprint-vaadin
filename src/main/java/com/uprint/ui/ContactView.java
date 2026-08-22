@@ -5,14 +5,13 @@ import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
-@Route(value = "contact", layout = MainLayout.class)
+@Route(value = "contactus", layout = MainLayout.class)
 public class ContactView extends VerticalLayout {
 
     public ContactView() {
-        Div imageContainer = new Div();
-        imageContainer.addClassName("contact-container");
-        imageContainer.add(setupBannerText());
-        add(imageContainer);
+        Div container = new Div();
+        container.add(setupBannerText());
+        add(container);
     }
 
     private Div setupBannerText() {

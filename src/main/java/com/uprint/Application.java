@@ -1,5 +1,6 @@
 package com.uprint;
 
+import com.vaadin.flow.server.AppShellSettings;
 import com.vaadin.flow.theme.aura.Aura;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,4 +19,8 @@ public class Application implements AppShellConfigurator {
         SpringApplication.run(Application.class, args);
     }
 
+    @Override
+    public void configurePage(AppShellSettings settings) {
+        settings.addFavIcon("icon", "static/images/icons/logo3.png", "32x32");
+    }
 }
